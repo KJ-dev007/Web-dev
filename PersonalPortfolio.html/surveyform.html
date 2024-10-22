@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #8b6a8b;
+        padding: 20px;
+        margin: 0;
+      }
+      #survey-form {
+        background-color: #008b8b;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      #submit {
+        background-color: #4caf50;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: auto;
+      }
+      #submit:hover {
+        background-color: #98aa98;
+      }
+      label {
+        font-weight: bold;
+      }
+      form > * {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input
+        id="name"
+        type="text"
+        placeholder="full name"
+        name="name"
+        required
+      />
+      <br />
+
+      <label for="email" id="email-label">Email:</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="email"
+        name="email"
+        required
+      />
+      <br />
+
+      <label for="number" id="number-label">Age:</label>
+      <input
+        id="number"
+        type="number"
+        placeholder="age"
+        name="age"
+        required
+        min="18"
+        max="70"
+      />
+      <br />
+      <label for="dropdown">How did you hear about us?</label>
+      <select id="dropdown" name="how heard">
+        <option value="select-an-option">Select an option</option>
+        <option value="social-media">Social Media</option>
+        <option value="referral-by-a-friend">Referral by a friend</option>
+      </select>
+      <br />
+      <label>Would you recommend freeCodeCamp to a friend</label>
+      <br />
+      <label for="definitely"
+        ><input
+          type="radio"
+          id="definitely"
+          name="recommendation"
+          value="definitely"
+        />Definately</label
+      >
+      <label for="maybe"
+        ><input
+          type="radio"
+          id="maybe"
+          name="recommendation"
+          value="maybe"
+        />Maybe</label
+      >
+      <br />
+      <label for="favourite-feature"
+        >What is your favourite feature of freeCodeCamp?
+      </label>
+      <select id="favourite-feature" name="favourite-feature">
+        <option value="select-an-option">Select an option</option>
+        <option value="projects">Projects</option>
+        <option value="challenges">Challenges</option>
+      </select>
+      <label>What would you like to see improved? (Check all that apply)</label>
+      <br />
+      <label for="back-end-projects"
+        ><input
+          type="checkbox"
+          id="back-end-projects"
+          name="improvements"
+          value="back-end-projects"
+        />Back-end Projects</label
+      ><br />
+      <label for="additional-courses"
+        ><input
+          type="checkbox"
+          id="additional-courses"
+          name="improvements"
+          value="additional-courses"
+        />Additional Courses</label
+      ><br />
+      <label for="comments">Any additional comments</label> <br />
+      <textarea
+        id="comments"
+        name="comments"
+        placeholder="Enter any additional comments here"
+      ></textarea
+      ><br />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
